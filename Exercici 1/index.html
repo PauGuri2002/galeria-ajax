@@ -10,30 +10,54 @@
 
 <body>
     <div id="top-container">
-        <div id="list-navigation">
-            <button onclick="changePage(-1)">« Prev</button>
-            <button onclick="changePage(1)">Next »</button>
+        <div id="header">
+            <div id="list-navigation">
+                <button onclick="changePage(-1)">« Prev</button>
+                <button onclick="changePage(1)">Next »</button>
+            </div>
+            <div id="title">
+                <h1>Indie Games Database</h1>
+            </div>
         </div>
+
         <div id="games-container">
             <div class="half left">
 
                 <div id="list-container">
-                    <ul id="list"></ul>
+                    <div id="game-list"></div>
                 </div>
             </div>
             <div class="half right">
                 <div id="details-container">
                     <div id="details">
-                        <div class="banner"
+                        <!-- <div class="banner"
                             style="background-image: url(https://media.rawg.io/media/games/a5a/a5abaa1b5cc1567b026fa3aa9fbd828e.jpg);">
                             <div class="banner-overlay"></div>
-                            <h2 class="title">Celeste</h2>
+                            <h2 class="name">Celeste</h2>
+                            <p class="developer">Devolver Digital</p>
+                            <div class="metacritic">92</div>
                         </div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">· 23 ratings</span>
+                        </div>
+                        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                            laboriosam ex, ut animi error molestias sunt, accusamus optio quo quisquam maiores eos sint
+                            laborum corporis quidem. Modi inventore consequatur deserunt.
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
-
+        <div id="bottom-container">
+            <div id="dev-list">
+                <!-- <div class="dev"
+                    style="background-image: url(https://media.rawg.io/media/games/a5a/a5abaa1b5cc1567b026fa3aa9fbd828e.jpg);">
+                    <div class="dev-overlay"></div>
+                    <p class="dev-name">Amanita Design</p>
+                </div> -->
+            </div>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>

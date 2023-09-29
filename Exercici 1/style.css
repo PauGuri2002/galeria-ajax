@@ -9,16 +9,35 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+/* TOP CONTAINER */
+
 #top-container {
   width: 100%;
-  height: 80vh;
+}
+
+#header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title {
+  width: 50%;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 20px;
 }
 
 #list-navigation {
   width: 50%;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 10px;
+  height: 60px;
 }
 
 #list-navigation button {
@@ -42,7 +61,7 @@ body {
 
 #games-container {
   width: 100%;
-  height: 100%;
+  height: 75vh;
   display: flex;
 }
 
@@ -65,7 +84,7 @@ body {
   flex-direction: column;
 }
 
-#list {
+#game-list {
   width: 100%;
   columns: 2;
   column-gap: 10px;
@@ -73,15 +92,14 @@ body {
 }
 
 @media (max-width: 1000px) {
-  #list {
+  #game-list {
     columns: 1;
   }
 }
 
-#list li {
+#game-list .game {
   position: relative;
   transform: translateY(0px);
-  list-style: none;
   width: 100%;
   height: 60px;
   margin-bottom: 10px;
@@ -96,25 +114,25 @@ body {
   transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-#list li:hover {
+#game-list .game:hover {
   background-color: #18188b;
   transform: scale(1.02);
 }
 
-#list li.selected {
+#game-list .game.selected {
   background-color: #ffffff;
   color: #18188b;
   font-weight: bold;
 }
 
-#list li p {
+#game-list .game p {
   padding: 10px;
   max-width: calc(100% - 40px);
   height: inherit;
   text-overflow: ellipsis;
 }
 
-#list li div {
+#game-list .game div {
   width: 40px;
   height: 40px;
   display: flex;
@@ -129,7 +147,8 @@ body {
 #details {
   display: flex;
   flex-direction: column;
-  padding: 10px 10px 0px 10px;
+  gap: 12px;
+  padding: 0px 10px;
 }
 
 .banner {
@@ -137,7 +156,7 @@ body {
   height: 300px;
   background-color: #252052;
   border-radius: 15px;
-  margin-bottom: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -149,22 +168,121 @@ body {
 
 .banner-overlay {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: #18188b;
   background: linear-gradient(0deg, #18188be6 0%, #00000000 60%);
 }
 
-.title {
-  padding: 20px;
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
+.name,
+.developer {
   position: relative;
   z-index: 10;
 }
 
-#details img {
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.developer {
+  padding-top: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.metacritic {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.rating {
+  color: #bbbbbb;
+  padding: 0px 20px;
+}
+
+.rating span {
+  vertical-align: middle;
+}
+
+.rating .rating-count {
+  font-size: 14px;
+}
+
+.rating .stars {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.description {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0px 20px;
+}
+
+.description p {
+  margin-bottom: 10px;
+}
+
+/* BOTTOM CONTAINER */
+
+#bottom-container {
   width: 100%;
-  height: auto;
+  height: calc(25vh - 60px);
+  padding-top: 10px;
+  overflow-x: auto;
+}
+
+#dev-list {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+
+.dev {
+  background-color: #252052;
+  background-size: cover;
+  background-position: center center;
+  width: 150px;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.dev-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000070;
+}
+
+.dev-name {
+  padding: 0px 10px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
