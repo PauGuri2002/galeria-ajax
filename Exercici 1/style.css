@@ -1,16 +1,170 @@
-#container {
-    display: flex;
-    width: 100%;
-    height: 700px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#container div {
-    width: 50%;
-    height: 100%;
-    overflow: auto;
+body {
+  background-color: #0c0b11;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#top-container {
+  width: 100%;
+  height: 80vh;
+}
+
+#list-navigation {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#list-navigation button {
+  background-color: #252052;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#list-navigation button:hover {
+  background-color: #18188b;
+}
+
+/* GAMES CONTAINER */
+
+#games-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.half {
+  width: 50%;
+  height: 100%;
+}
+
+#list-container,
+#details-container {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* HALF LEFT */
+
+.half.left {
+  display: flex;
+  flex-direction: column;
+}
+
+#list {
+  width: 100%;
+  columns: 2;
+  column-gap: 10px;
+  padding: 0px 10px;
+}
+
+@media (max-width: 1000px) {
+  #list {
+    columns: 1;
+  }
+}
+
+#list li {
+  position: relative;
+  transform: translateY(0px);
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+  background-color: #252052;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  break-inside: avoid;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#list li:hover {
+  background-color: #18188b;
+  transform: scale(1.02);
+}
+
+#list li.selected {
+  background-color: #ffffff;
+  color: #18188b;
+  font-weight: bold;
+}
+
+#list li p {
+  padding: 10px;
+  max-width: calc(100% - 40px);
+  height: inherit;
+  text-overflow: ellipsis;
+}
+
+#list li div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* HALF RIGHT */
+
+#details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0px 10px;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  background-color: #252052;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #18188b;
+  background: linear-gradient(0deg, #18188be6 0%, #00000000 60%);
+}
+
+.title {
+  padding: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 10;
 }
 
 #details img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }

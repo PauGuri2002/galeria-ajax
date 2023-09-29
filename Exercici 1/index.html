@@ -9,16 +9,31 @@
 </head>
 
 <body>
-    <div id="container">
-        <div>
-            <button onclick="changePage(-1)">Prev</button>
-            <button onclick="changePage(1)">Next</button>
-            <ul id="list">
+    <div id="top-container">
+        <div id="list-navigation">
+            <button onclick="changePage(-1)">« Prev</button>
+            <button onclick="changePage(1)">Next »</button>
+        </div>
+        <div id="games-container">
+            <div class="half left">
 
-            </ul>
+                <div id="list-container">
+                    <ul id="list"></ul>
+                </div>
+            </div>
+            <div class="half right">
+                <div id="details-container">
+                    <div id="details">
+                        <div class="banner"
+                            style="background-image: url(https://media.rawg.io/media/games/a5a/a5abaa1b5cc1567b026fa3aa9fbd828e.jpg);">
+                            <div class="banner-overlay"></div>
+                            <h2 class="title">Celeste</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="details"></div>
     </div>
     <script src="main.js"></script>
 </body>

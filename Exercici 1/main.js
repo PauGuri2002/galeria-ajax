@@ -6,10 +6,11 @@ const list = document.getElementById('list');
 const details = document.getElementById('details');
 var currentPage = 1;
 
-window.addEventListener('load', populateList);
+//window.addEventListener('load', populateList);
 
 function populateList() {
     list.innerHTML = "";
+    details.innerHTML = "";
 
     fetch("https://api.rawg.io/api/games?key=" + key + "&genres=" + genres + "&page_size=" + page_size + "&page=" + currentPage + "&ordering=" + order)
         .then(response => response.json())
@@ -17,14 +18,27 @@ function populateList() {
             data.results.forEach(game => {
                 let score = game.metacritic;
                 let color = score < 50 ? "red" : score < 75 ? "orange" : "green";
-                list.innerHTML += `<li onclick="populateDetails(${game.id})">${game.name} <strong style="background-color: ${color}; color: white;">&nbsp;${score}&nbsp;</strong></li>`;
+
+                let li = document.createElement('li');
+                li.addEventListener('click', (event) => populateDetails(event));
+                li.dataset.id = game.id;
+                li.innerHTML = `<p>${game.name}</p><div style="background-color: ${color}; color: white;">&nbsp;${score}&nbsp;</div>`;
+                list.appendChild(li);
             });
         })
 }
 
-function populateDetails(id) {
-    details.innerHTML = "";
+function populateDetails(event) {
+    let element = event.currentTarget;
+    let id = element.dataset.id;
 
+    let selected = document.querySelector(".selected");
+    if (selected) {
+        selected.classList.remove("selected");
+    }
+    element.classList.add("selected");
+
+    details.innerHTML = "";
     fetch("https://api.rawg.io/api/games/" + id + "?key=" + key)
         .then(response => response.json())
         .then(data => {
@@ -39,7 +53,7 @@ function populateDetails(id) {
 }
 
 function changePage(offset) {
-    let newPage = currentPage += offset;
+    let newPage = currentPage + offset;
     if (newPage >= 1) {
         currentPage = newPage;
         populateList();
