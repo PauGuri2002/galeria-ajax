@@ -25,13 +25,14 @@ function populateGameList() {
                 let color = score < 50 ? "red" : score < 75 ? "orange" : "green";
 
                 let div = document.createElement('div');
-                div.addEventListener('click', (event) => populateDetails(event));
+                div.addEventListener('click', populateDetails);
                 div.classList.add('game');
                 div.dataset.id = game.id;
                 div.innerHTML = `<p>${game.name}</p><div style="background-color: ${color};">&nbsp;${score}&nbsp;</div>`;
                 game_list.appendChild(div);
             });
         })
+        .catch(err => console.log(err));
 }
 
 var isPopulating = false;
@@ -146,6 +147,6 @@ function changePage(offset) {
     let new_page = game_page + offset;
     if (new_page >= 1) {
         game_page = new_page;
-        populateList();
+        populateGameList();
     }
 }
