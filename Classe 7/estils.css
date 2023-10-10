@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* CSS Document */
+#root {
+	border: 1px solid silver;
+	padding: .5em;
+	margin-left: 2%;
+	min-height: 150px;
+}
+
+.recipe-picture {
+	width: 100%;
+	max-width: 700px;
+	height: auto;
+}
