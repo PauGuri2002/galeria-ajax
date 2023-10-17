@@ -39,7 +39,6 @@ const devList = {
     page_size: 10,
 
     populate: function (callback) {
-        console.log("https://api.rawg.io/api/developers?key=" + key + "&page_size=" + this.page_size);
         fetch("https://api.rawg.io/api/developers?key=" + key + "&page_size=" + this.page_size)
             .then(response => response.json())
             .then(data => {
