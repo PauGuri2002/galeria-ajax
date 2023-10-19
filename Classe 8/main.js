@@ -7,11 +7,6 @@ class WeatherMap {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         this.map = new google.maps.Map(document.getElementById(containerId), options);
-        let marker = new google.maps.Marker({
-            position: position,
-            map: this.map,
-            title: "Barcelona",
-        });
     }
 
     loadWeatherData(fetchUrl) {
