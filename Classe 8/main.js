@@ -30,20 +30,7 @@ class WeatherMap {
     }
 
     getIcon(weatherKey) {
-        switch (weatherKey) {
-            case "lluvia":
-                return "https://citmalumnes.upc.es/~davids/awug1_2324/05_maps/meteo/imagenes/lluvia.png";
-            case "nieve":
-                return "https://citmalumnes.upc.es/~davids/awug1_2324/05_maps/meteo/imagenes/nieve.png";
-            case "nublado":
-                return "https://citmalumnes.upc.es/~davids/awug1_2324/05_maps/meteo/imagenes/nublado.png"
-            case "soleado":
-                return "https://citmalumnes.upc.es/~davids/awug1_2324/05_maps/meteo/imagenes/soleado.png";
-            case "tormentas":
-                return "https://citmalumnes.upc.es/~davids/awug1_2324/05_maps/meteo/imagenes/tormentas.png";
-            default:
-                return "https://citmalumnes.upc.es/~davids/awug1_2324/05_maps/meteo/imagenes/soleado.spng";
-        }
+        return "https://citmalumnes.upc.es/~davids/awug1_2324/05_maps/meteo/imagenes/" + weatherKey + ".png";
     }
 }
 
