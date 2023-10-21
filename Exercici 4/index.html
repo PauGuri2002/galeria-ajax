@@ -4,14 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
     <script src="main.js"></script>
 </head>
 
 <body>
-    <div id="map-container" style="height: 800px;"></div>
-    <div id="details-container"></div>
+    <div id="map-container">
+        <div id="map"></div>
+        <div id="toggle-container">
+            <div class="toggle-label">Totes</div>
+            <div class="toggle">
+                <div class="toggle-knob"></div>
+            </div>
+            <div class="toggle-label">Obertes 24h</div>
+        </div>
+        <div id="details-container">
+            <h2>Gasolinera xd</h2>
+            <div class="address">Carrer de la Marina, 16, 08005 Barcelona</div>
+            <div class="timetable">Obert les 24 hores</div>
+            <div class="contact">Email: gas@gas.com<br />Telèfon: 123456789</div>
+        </div>
+    </div>
+    <div id="list-container">
+        <ul id="list"></ul>
+    </div>
 </body>
 
 </html>
