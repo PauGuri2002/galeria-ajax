@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "titulo": "Alumnos de una escuela de Artes Aplicadas de la Isla Martinica visitan el CITM",
+        "imagen": "https://www.citm.upc.edu/blog/wp-content/uploads/2019/09/IllaMartinica-437x300.jpg",
+        "link": "https://www.citm.upc.edu/blog/alumnos-de-una-escuela-de-artes-aplicadas-de-la-isla-martinica-visitan-el-citm/",
+        "fecha": "2019-09-25"
+    },
+    {
+        "id": "3",
+        "titulo": "El CITM da la bienvenida al nuevo curso académico",
+        "imagen": "https://www.citm.upc.edu/blog/wp-content/uploads/2019/09/David_Sanchez-423x300.jpg",
+        "link": "https://www.citm.upc.edu/blog/el-citm-da-la-bienvenida-al-nuevo-curso-academico-2/",
+        "fecha": "2019-09-18"
+    },
+    {
+        "id": "4",
+        "titulo": "La professora Carolina López, comissària del festival internacional ANIMARIO",
+        "imagen": "https://www.citm.upc.edu/blog/wp-content/uploads/2021/11/Animario.jpg",
+        "link": "https://www.citm.upc.edu/blog/la-professora-carolina-lopez-comissaria-del-festival-internacional-animario/?lang=ca",
+        "fecha": "2021-11-18"
+    },
+    {
+        "id": "5",
+        "titulo": "Eva Villegas i Maria Pagès, noves professores PDI del CITM",
+        "imagen": "https://www.citm.upc.edu/blog/wp-content/uploads/2022/10/ProfessoresCITM-2048x1323.jpg",
+        "link": "https://www.citm.upc.edu/blog/eva-villegas-i-maria-pages-noves-professores-pdi-del-citm/?lang=ca",
+        "fecha": "2022-10-24"
+    },
+    {
+        "id": "6",
+        "titulo": "La professora Carolina López, comissària del festival internacional ANIMARIO 2022",
+        "imagen": "https://www.citm.upc.edu/blog/wp-content/uploads/2022/10/Animario-1.jpg",
+        "link": "https://www.citm.upc.edu/blog/la-professora-carolina-lopez-comissaria-del-festival-internacional-animario-2022/?lang=ca",
+        "fecha": "2022-10-20"
+    },
+    {
+        "id": "7",
+        "titulo": "Gerard Pasqual apropa els projectes de Marvel als estudiants del CITM",
+        "imagen": "https://www.citm.upc.edu/blog/wp-content/uploads/2022/10/Pasqual.jpg",
+        "link": "https://www.citm.upc.edu/blog/gerard-pasqual-apropa-els-projectes-de-marvel-als-estudiants-del-citm-2/?lang=ca",
+        "fecha": "2022-10-06"
+    }
+]
