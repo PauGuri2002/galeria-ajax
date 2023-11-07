@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import data from './data.json';
 import NewsCard from './newsCard';
@@ -7,11 +6,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {data.map((item) => {
-        return (
-          <NewsCard data={item} />
-        )
-      })}
+      <main class="card-container">
+        {data.map((item) => {
+          return (
+            <NewsCard data={item} />
+          )
+        })}
+      </main>
       <Footer />
     </div>
   );
@@ -19,16 +20,16 @@ function App() {
 
 function Header() {
   return (
-    <header>
-      <h1>Header</h1>
+    <header class="py-8">
+      <h1 class="text-h1 font-bold text-center">Actualitat CITM</h1>
     </header>
   );
 }
 
 function Footer() {
   return (
-    <footer>
-      <h1>Footer</h1>
+    <footer class="bg-blue-500 h-24 flex flex-col justify-center absolute left-0 bottom-0 w-full">
+      <div class="text-center text-white">CITM 2023</div>
     </footer>
   );
 }
