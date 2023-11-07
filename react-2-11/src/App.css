@@ -7,7 +7,7 @@ body {
 }
 
 .card {
-  @apply relative p-4 transition-all transform translate-x-0 bg-white border border-black rounded-xl;
+  @apply relative p-4 transition-all transform translate-x-0 bg-white border border-black rounded-xl flex flex-col justify-between gap-4;
   box-shadow: -6px 6px 0px 0px black;
 }
 
@@ -17,11 +17,7 @@ body {
 }
 
 .card-img {
-  @apply object-cover w-full h-48 rounded-t-lg;
-}
-
-.card-body {
-  @apply pt-4;
+  @apply object-cover w-full h-48 rounded-t-lg mb-4;
 }
 
 .card-title {
@@ -29,5 +25,5 @@ body {
 }
 
 .card .btn-primary {
-  @apply inline-block px-3 py-2 mt-4 text-white transition-colors bg-blue-500 rounded-full hover:bg-blue-700;
+  @apply block w-fit px-3 py-2 text-white transition-colors bg-blue-500 rounded-full hover:bg-blue-700;
 }
