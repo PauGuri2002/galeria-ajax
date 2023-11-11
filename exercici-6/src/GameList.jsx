@@ -7,18 +7,25 @@ export default function GameList({ searchQuery }) {
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        if (!searchQuery) return;
+        if (!searchQuery) {
+            setGames([]);
+            return;
+        }
+
         console.log("fetch games: " + searchQuery);
         fetch(`https://api.rawg.io/api/games?key=${apiKey}&search=${searchQuery}&search_precise=true`)
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 setGames(data.results);
             })
     }, [searchQuery]);
 
     return (
-        <ul>
-            {games.map(game => <GameCard key={game.id} name={game.name} image={game.background_image} />)}
-        </ul>
+        <main>
+            <ul id="game-list">
+                {games.map(game => <GameCard key={game.id} name={game.name} image={game.background_image} releaseDate={game.released} />)}
+            </ul>
+        </main>
     )
 }
