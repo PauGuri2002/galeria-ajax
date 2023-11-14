@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Frodo Baggins",
+        "race": "Hobbit",
+        "age": "33",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 2,
+        "name": "Gandalf",
+        "race": "Maia",
+        "age": "2019",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 3,
+        "name": "Aragorn",
+        "race": "Human",
+        "age": "87",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 4,
+        "name": "Legolas",
+        "race": "Elf",
+        "age": "2931",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 5,
+        "name": "Gimli",
+        "race": "Dwarf",
+        "age": "139",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 6,
+        "name": "Samwise Gamgee",
+        "race": "Hobbit",
+        "age": "38",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 7,
+        "name": "Meriadoc Brandybuck",
+        "race": "Hobbit",
+        "age": "36",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 8,
+        "name": "Peregrin Took",
+        "race": "Hobbit",
+        "age": "28",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 9,
+        "name": "Boromir",
+        "race": "Human",
+        "age": "41",
+        "first_appearance": "The Fellowship of the Ring"
+    },
+    {
+        "id": 10,
+        "name": "Gollum",
+        "race": "Hobbit",
+        "age": "unknown",
+        "first_appearance": "The Two Towers"
+    }
+]
