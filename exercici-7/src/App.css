@@ -1,0 +1,28 @@
+.App {
+    @apply container px-6 py-16 mx-auto;
+}
+
+#search-input {
+    @apply p-8 bg-transparent text-center text-2xl sm:text-4xl md:text-6xl lg:text-8xl w-full text-cyan-500 font-bold uppercase outline-none border-b-2 border-white rounded-[30px] cursor-pointer [&:not(:placeholder-shown)]:border-cyan-500 focus:border-cyan-500 focus:cursor-text placeholder:text-white placeholder:transition-opacity placeholder:opacity-100 focus:placeholder:opacity-20;
+}
+
+main {
+    @apply pt-10;
+}
+
+#game-list {
+    @apply grid gap-6 lg:grid-cols-2;
+}
+
+.game-card {
+    @apply w-full text-white  border-t-2 border-white rounded-[30px] py-4 px-6 outline outline-transparent outline-2 hover:outline-cyan-500 hover:border-cyan-500 hover:text-cyan-500 transition-all;
+}
+.game-card .card-header {
+    @apply flex justify-between gap-4 align-middle cursor-default;
+}
+.game-card h2 {
+    @apply text-lg font-bold md:text-2xl lg:overflow-hidden lg:whitespace-nowrap lg:text-ellipsis;
+}
+.game-card .release-date {
+    @apply flex-shrink-0 text-base font-bold opacity-50 md:text-lg w-max;
+}
