@@ -2,11 +2,9 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Game from './components/Game';
-import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from "react-router-dom";
 import Home from './components/Home';
 import SearchResults from './components/SearchResults';
