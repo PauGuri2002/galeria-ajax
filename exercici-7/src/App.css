@@ -1,16 +1,16 @@
 /* HEADER */
 
 header {
-    @apply container py-10 px-6 mx-auto;
+    @apply container px-6 py-10 mx-auto;
 }
 
 #page-title {
-    @apply text-5xl font-bold text-left text-white hover:text-cyan-500 transition-colors;
+    @apply text-5xl font-bold text-left text-white transition-colors hover:text-cyan-500;
 
 }
 
 #search-bar {
-    @apply w-full flex gap-6;
+    @apply flex w-full gap-6;
 }
 
 #search-input {
@@ -20,14 +20,15 @@ header {
 #search-btn {
     @apply w-24 lg:w-48 h-full shrink-0 text-white border-b-2 border-white rounded-[30px] py-4 px-6 outline outline-transparent outline-2 hover:outline-cyan-500 hover:border-cyan-500 hover:text-cyan-500 transition-all;
 }
-#search-btn > svg {
-    @apply w-3/4 aspect-square mx-auto;
+
+#search-btn>svg {
+    @apply w-3/4 mx-auto aspect-square;
 }
 
- /* MAIN */
+/* MAIN */
 
 main {
-    @apply container py-10 px-6 mx-auto;
+    @apply container px-6 py-10 mx-auto;
 }
 
 #game-list {
@@ -37,12 +38,15 @@ main {
 .game-card {
     @apply w-full text-white border-t-2 border-white rounded-[30px] py-4 px-6 outline outline-transparent outline-2 hover:outline-cyan-500 hover:border-cyan-500 hover:text-cyan-500 transition-all;
 }
+
 .game-card .card-header {
     @apply flex justify-between gap-4 align-middle cursor-default;
 }
+
 .game-card h2 {
     @apply text-lg font-bold md:text-2xl lg:overflow-hidden lg:whitespace-nowrap lg:text-ellipsis;
 }
+
 .game-card .release-date {
     @apply flex-shrink-0 text-base font-bold opacity-50 md:text-lg w-max;
 }
@@ -50,21 +54,37 @@ main {
 #game-details {
     @apply flex flex-col gap-8 text-white;
 }
+
 #game-banner {
     @apply relative w-full aspect-[3/1] bg-center bg-cover rounded-[30px] border-b-2 border-t-2 border-cyan-700;
 }
+
 #game-banner-overlay {
-    @apply absolute h-full w-full bg-black opacity-50;
+    @apply absolute w-full h-full bg-black opacity-50;
 }
+
 #game-banner h1 {
-    @apply absolute bottom-0 left-0 p-6 text-3xl lg:text-5xl font-bold text-white;
+    @apply absolute bottom-0 left-0 p-6 text-3xl font-bold text-white lg:text-5xl;
 }
+
 #game-info {
     @apply flex gap-4;
+}
+
+#game-desc {
+    @apply w-4/5;
+}
+
+#game-tags {
+    @apply flex flex-wrap justify-end w-1/5 gap-2;
+}
+
+#game-tags .tag {
+    @apply flex-shrink-0 block px-4 py-2 text-sm font-bold transition-colors rounded-full select-none h-min bg-cyan-700 hover:bg-cyan-900;
 }
 
 /* FOOTER */
 
 footer {
-    @apply text-center text-white text-lg py-10 mt-10 bg-cyan-950;
+    @apply py-10 mt-10 text-lg text-center text-white bg-cyan-950;
 }

@@ -26,11 +26,11 @@ export default function Game({ match }) {
                 <h1>{game.name}</h1>
             </div>
             <div id="game-info">
-                <div className="text-lg">
+                <div id="game-desc" className="text-lg">
                     {game.description_raw}
                 </div>
-                <div>
-                    {game.ta}
+                <div id="game-tags">
+                    {game.tags.map(tag => <span key={tag.id} className="tag">{tag.name}</span>)}
                 </div>
             </div>
         </div>
