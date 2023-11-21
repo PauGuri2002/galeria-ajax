@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min"
 import SearchBar from "./SearchBar"
 
 export default function Header() {
     return (
-        <div>
-            <h1>RAWG Games Search</h1>
+        <header>
+            <h1 id="page-title">
+                <Link to="/">
+                    RAWG <span className="font-normal">Games Search</span>
+                </Link>
+            </h1>
             <SearchBar />
-        </div>
+        </header>
     )
 }

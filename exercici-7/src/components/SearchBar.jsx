@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import searchIcon from "../search.svg"
 
 export default function SearchBar() {
     const [query, setQuery] = useState("");

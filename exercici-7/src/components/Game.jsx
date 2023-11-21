@@ -20,8 +20,19 @@ export default function Game({ match }) {
     if (!game.name) return;
 
     return (
-        <div>
-            <h1>Game {game.name}</h1>
+        <div id="game-details">
+            <div id="game-banner" style={{ backgroundImage: 'url(' + game.background_image + ')', }}>
+                <div id="game-banner-overlay"></div>
+                <h1>{game.name}</h1>
+            </div>
+            <div id="game-info">
+                <div className="text-lg">
+                    {game.description_raw}
+                </div>
+                <div>
+                    {game.ta}
+                </div>
+            </div>
         </div>
     )
 }

@@ -14,9 +14,11 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Route path="/" exact component={Home} />
-        <Route path="/search/:query" component={SearchResults} />
-        <Route path="/game/:id" component={Game} />
+        <main>
+          <Route path="/" exact component={Home} />
+          <Route path="/search/:query" component={SearchResults} />
+          <Route path="/game/:id" component={Game} />
+        </main>
       </Router>
       <Footer />
     </div>

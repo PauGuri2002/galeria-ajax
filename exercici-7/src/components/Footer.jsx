@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <div>
+        <footer>
             Pau Guri Viura
-        </div>
+        </footer>
     )
 }
